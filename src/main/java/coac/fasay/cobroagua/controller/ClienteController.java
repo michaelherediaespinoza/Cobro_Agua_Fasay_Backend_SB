@@ -54,7 +54,8 @@ public class ClienteController {
             map.put("message", "Cliente GUARDADO Satisfactoriamente!");
             return new ResponseEntity<>(map, HttpStatus.OK);
         } catch (Exception ex) {
-            ex.printStackTrace();
+            //ex.printStackTrace();
+            System.out.println("ERROR: " + ex.getMessage());
             map.clear();
             map.put("status", 0);
             map.put("message", ex.getMessage());
